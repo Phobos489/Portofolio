@@ -34,10 +34,10 @@
 <section id="about" class="py-5">
   <div class="container d-flex align-items-center">
     <div class="about-content">
-      <h2 class="about-title">About Me</h2>
-      <div class="about-line"></div>
-      <div class="about-line2"></div>
-      <p class="about-text">
+      <h2 class="about-title animate-left">About Me</h2>
+      <div class="about-line animate-left"></div>
+      <div class="about-line2 animate-right"></div>
+      <p class="about-text animate-left">
       If you're really that curious about me, then allow me to share a brief introduction about myself.
       </p>
     </div>
@@ -51,9 +51,9 @@
 <section id="desc" class="py-5">
   <div class="container d-flex flex-column">
     <div class="desc-content">
-      <div class="desc-line"></div>
-      <div class="desc-line2"></div>
-      <h2 class="desc-title">Who Am I?</h2>
+      <div class="desc-line animate-left"></div>
+      <div class="desc-line2 animate-right"></div>
+      <h2 class="desc-title animate-left">Who Am I?</h2>
     </div>
     <div class="desc-wrapper d-flex">
       <div class="desc-images">
@@ -68,12 +68,12 @@
         </div>
       </div>
       <div class="desc-text">
-        <h3 class="desc-subtitle">Rio Syamsuri</h3>
-        <p class="desc-description">
+        <h3 class="desc-subtitle animate-left">Rio Syamsuri</h3>
+        <p class="desc-description animate-left">
           Hey there! I'm Rio Syamsuri, a passionate mobile and web developer. Currently, I'm pursuing my studies at Universitas Binaniaga Indonesia, majoring in Informatics Engineering. My journey into the world of programming began with a simple curiosity—how do people create such amazing applications and websites? That curiosity soon turned into a deep passion, driving me to learn and explore more about software development. Through continuous learning and hands-on experience, I strive to improve my skills and build innovative digital solutions that can make a real impact.
         </p>
         <!-- Tambahkan tombol Spotify di sini -->
-        <button class="spotify-button">
+        <button class="spotify-button animate-left">
           <i class="fab fa-spotify"></i>
           <span>Currently Offline</span>
         </button>
@@ -87,8 +87,8 @@
   <div class="container d-flex flex-column align-items-center">
     <!-- Judul Skill -->
     <div class="skill-content text-center">
-      <h2 class="skill-title">Skill & Expertise</h2>
-      <p class="skill-description">
+      <h2 class="skill-title animate-up">Skill & Expertise</h2>
+      <p class="skill-description animate-up">
         Explore some skills I'm proficient in to deliver high-quality solutions.
       </p>
     </div>
@@ -96,38 +96,38 @@
     <div class="skill-grid">
       <!-- Skill 1 -->
       <div class="skill-item">
-        <i class="bi bi-code-square skill-icon"></i>
-        <h3 class="skill-name">Web Development</h3>
+        <i class="bi bi-code-square skill-icon animate-up"></i>
+        <h3 class="skill-name animate-up">Web Development</h3>
       </div>
       <!-- Skill 2 -->
       <div class="skill-item">
-        <i class="bi bi-phone skill-icon"></i>
-        <h3 class="skill-name">Mobile Development</h3>
+        <i class="bi bi-phone skill-icon animate-up"></i>
+        <h3 class="skill-name animate-up">Mobile Development</h3>
       </div>
       <!-- Skill 3 -->
       <div class="skill-item">
-        <i class="bi bi-database skill-icon"></i>
-        <h3 class="skill-name">Database Management</h3>
+        <i class="bi bi-database skill-icon animate-up"></i>
+        <h3 class="skill-name animate-up">Database Management</h3>
       </div>
       <!-- Skill 4 -->
       <div class="skill-item">
-        <i class="bi bi-brush skill-icon"></i>
-        <h3 class="skill-name">UI/UX Design</h3>
+        <i class="bi bi-brush skill-icon animate-up"></i>
+        <h3 class="skill-name animate-up">UI/UX Design</h3>
       </div>
     </div>
     <!-- Daftar Skill -->
     <div class="expert-grid">
       <!-- Skill 1 -->
       <div class="expert-item">
-        <h3 class="expert-name">Language & Framework</h3>
-        <p class="expert-detail">
+        <h3 class="expert-name animate-up">Language & Framework</h3>
+        <p class="expert-detail animate-up">
         HTML | CSS | Python | Javascript | Typescript | PHP | Go | Dart | Node.js | SQL | Angular | Express.js | Laravel | Flutter | Ionic | RPG Maker
       </p>
       </div>
       <!-- Skill 2 -->
       <div class="expert-item">
-        <h3 class="expert-name">Tools</h3>
-        <p class="expert-detail">
+        <h3 class="expert-name animate-up">Tools</h3>
+        <p class="expert-detail animate-up">
         VS Code | Android Studio | Git | GitHub | Postman | phpMyAdmin | Firebase
       </p>
       </div>
@@ -139,7 +139,7 @@
     <section id="quotes" class="py-5">
   <div class="container d-flex flex-column align-items-center">
     <div class="quotes-content text-center">
-      <h2 class="quotes-title">"Performance upgrade is a waste without tactical understandings."</h2>
+      <h2 class="quotes-title animate-up">"Performance upgrade is a waste without tactical understandings."</h2>
     </div>
   </div>
 </section>

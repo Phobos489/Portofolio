@@ -36,7 +36,7 @@ window.onbeforeunload = function () {
     });
   
     // Daftarkan elemen yang ingin diamati
-    const animateElements = document.querySelectorAll('.animate-left, .animate-right');
+    const animateElements = document.querySelectorAll('.animate-left, .animate-right, .animate-up');
     animateElements.forEach((element) => {
       observer.observe(element);
     });

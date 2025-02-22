@@ -467,6 +467,17 @@
   }
 }
 
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* Kelas untuk animasi */
 .animate-left {
   opacity: 0; /* Mulai dengan elemen tersembunyi */
@@ -480,6 +491,12 @@
   transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
+.animate-up {
+  opacity: 0; /* Mulai dengan elemen tersembunyi */
+  transform: translateY(30px); /* Mulai dari kanan */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
 /* Aktifkan animasi saat elemen masuk ke viewport */
 .animate-left.active {
   animation: slideInLeft 1s ease-out forwards;
@@ -487,4 +504,8 @@
 
 .animate-right.active {
   animation: slideInRight 1s ease-out forwards;
+}
+
+.animate-up.active {
+  animation: slideUp 1s ease-out forwards;
 }
