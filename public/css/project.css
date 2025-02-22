@@ -1,0 +1,490 @@
+/* ==================== VARIABLES ==================== */
+:root {
+    --primary-color: #333;
+    --secondary-color: #666;
+    --font-family-abel: 'Abel', sans-serif;
+    --font-family-quicksand: 'Quicksand', sans-serif;
+    --transition-duration: 0.3s;
+    --background-color: white;
+  }
+  
+  /* ==================== GENERAL STYLES ==================== */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    background-color: var(--background-color);
+    background-size: 20px 20px;
+    overflow-x: hidden;
+    font-family: var(--font-family-abel);
+  }
+
+  section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #dotBackground {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+  }
+  
+  .dot {
+    position: absolute;
+    bottom: -10px;
+    width: 5px;
+    height: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    animation: floatUp linear infinite;
+  }
+  
+  @keyframes floatUp {
+    0% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-100vh);
+      opacity: 0;
+    }
+  }
+  
+  /* ==================== NAVBAR STYLES ==================== */
+  .navbar {
+    background-color: rgba(255, 255, 255, 0);
+    margin-left: 30px;
+    margin-right: 30px;
+    box-shadow: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    width: 96%;
+    font-family: var(--font-family-quicksand);
+    font-weight: 500;
+  }
+  
+  .navbar-brand img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  
+  .navbar .fa-bars {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar .fa-bars:hover {
+    color: var(--secondary-color);
+  }
+
+  /* ==================== PROJECT SECTION STYLES ==================== */
+#project {
+  margin-left: 150px;
+  margin-right: 150px;
+  color: black;
+  font-family: var(--font-family-abel);
+}
+
+.project-image img {
+    margin-top: -22px;
+    margin-right: -200px;
+  width: 600px;
+  height: 600px;
+  object-fit: cover;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  filter: grayscale(100%);
+  transition: filter var(--transition-duration) ease-in-out;
+}
+
+.project-profile-img:hover {
+  filter: grayscale(0%);
+}
+
+.project-content {
+    margin-right: 100px;
+}
+
+.project-title {
+  font-size: 3.0rem;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.project-text {
+  margin-top: 40px;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #777;
+  text-align: justify;
+}
+
+.project-line {
+  width: 75px; /* Panjang garis */
+  height: 2px; /* Ketebalan garis */
+  background-color: var(--primary-color); /* Warna garis */
+  margin: 5px 0; /* Jarak dari judul dan deskripsi */
+}
+
+.project-line2 {
+  width: 75px; /* Panjang garis */
+  height: 2px; /* Ketebalan garis */
+  background-color: var(--primary-color); /* Warna garis */
+  margin: 0px 40px; /* Jarak dari judul dan deskripsi */
+}
+
+/* resources/css/project.css */
+/* ==================== HIGHLIGHT SECTION STYLES ==================== */
+#highlight {
+    color: black;
+    font-family: var(--font-family-abel);
+    padding: 50px 0; /* Tambahkan padding */
+  }
+  
+  .highlight-wrapper {
+    display: flex;
+    align-items: flex-start; /* Rata atas */
+    gap: 40px; /* Jarak antara gambar dan tulisan */
+  }
+
+  .highlight-title {
+    font-size: 2.3rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 50px;
+    text-align: left;
+  }
+
+  .highlight-line {
+    width: 60px; /* Panjang garis */
+    height: 2px; /* Ketebalan garis */
+    background-color: var(--primary-color); /* Warna garis */
+    margin: 5px -30px; /* Jarak dari judul dan deskripsi */
+  }
+  
+  .highlight-line2 {
+    width: 60px; /* Panjang garis */
+    height: 2px; /* Ketebalan garis */
+    background-color: var(--primary-color); /* Warna garis */
+    margin: 0px 0px; /* Jarak dari judul dan deskripsi */
+  }
+  
+  .highlight-images {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Jarak antara gambar */
+  }
+  
+  .highlight-text {
+    flex: 1; /* Tulisan mengambil sisa ruang */
+    margin-top: 120px;
+    margin-left: 150px;
+  }
+  
+  .highlight-subtitle {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 40px;
+  }
+  
+  .highlight-description {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+    margin-bottom: 0px;
+    line-height: 1.6;
+    color: #777;
+    text-align: justify;
+  }
+  
+  /* Styling untuk gambar di bawah Highlight */
+  .highlight-image {
+    margin-top: 20px; /* Jarak antara tulisan dan gambar */
+    margin-left: 100px;
+  }
+  
+  .highlight-img {
+    width: 145px;
+    height: 230px;
+    border-radius: 5px; /* Sudut melengkung */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Efek bayangan */
+    transition: transform var(--transition-duration) ease-in-out;
+  }
+  
+  .highlight-img:hover {
+    transform: scale(1.5); /* Efek zoom saat hover */
+  }
+  
+  .highlight-img2 {
+    margin-top: -180px;
+    margin-left: 80px;
+    width: 145px;
+    height: 230px;
+    border-radius: 10px; /* Sudut melengkung */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Efek bayangan */
+    transition: transform var(--transition-duration) ease-in-out;
+  }
+  
+  .highlight-img2:hover {
+    transform: scale(1.5); /* Efek zoom saat hover */
+  }
+  
+  .highlight-img3 {
+    margin-top: -150px;
+    margin-left: 50px;
+    width: 145px;
+    height: 230px;
+    border-radius: 10px; /* Sudut melengkung */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Efek bayangan */
+    transition: transform var(--transition-duration) ease-in-out;
+  }
+  
+  .highlight-img3:hover {
+    transform: scale(1.5); /* Efek zoom saat hover */
+  }
+
+  .highlight-img4 {
+    margin-top: -500px;
+    margin-left: -50px;
+    width: 145px;
+    height: 230px;
+    border-radius: 10px; /* Sudut melengkung */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Efek bayangan */
+    transition: transform var(--transition-duration) ease-in-out;
+  }
+  
+  .highlight-img4:hover {
+    transform: scale(1.5); /* Efek zoom saat hover */
+  }
+
+/* ==================== LIST SECTION STYLES ==================== */
+#list {
+    color: black;
+    font-family: var(--font-family-abel);
+    padding: 50px 0; /* Tambahkan padding */
+    margin-top: -50px;
+  }
+
+  .list-wrapper {
+    display: flex;
+    align-items: flex-start; /* Rata atas */
+    gap: 40px; /* Jarak antara gambar dan tulisan */
+  }
+
+  .list-title {
+    font-size: 2.3rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 50px;
+    text-align: left;
+  }
+
+  .list-line {
+    width: 60px; /* Panjang garis */
+    height: 2px; /* Ketebalan garis */
+    background-color: var(--primary-color); /* Warna garis */
+    margin: 5px -30px; /* Jarak dari judul dan deskripsi */
+  }
+  
+  .list-line2 {
+    width: 60px; /* Panjang garis */
+    height: 2px; /* Ketebalan garis */
+    background-color: var(--primary-color); /* Warna garis */
+    margin: 0px 0px; /* Jarak dari judul dan deskripsi */
+  }
+
+  .list-text {
+    flex: 1; /* Mengambil sisa ruang di sebelah kanan gambar */
+    margin-left: 40px; /* Jarak antara gambar dan teks */
+    margin-top: 20px; /* Sesuaikan jarak dari atas */
+    text-align: left;
+  }
+  
+  .list-subtitle {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .list-description {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #777;
+    text-align: justify;
+    margin-bottom: 0px;
+  }
+
+  .list-text-left {
+    flex: 1; /* Mengambil sisa ruang di sebelah kiri gambar */
+    margin-right: 40px; /* Jarak antara gambar dan teks */
+    margin-top: 20px; /* Sesuaikan jarak dari atas */
+    text-align: right; /* Teks rata kanan */
+  }
+  
+  .list-text-left .list-subtitle {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .list-text-left .list-description {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #777;
+    text-align: justify;
+    margin-bottom: 0px;
+  }
+
+    /* Styling untuk gambar di bawah List */
+  .list-image {
+    margin-top: 20px; /* Jarak antara tulisan dan gambar */
+  }
+  
+  .list-img {
+    width: 520px;
+    height: 280px;
+    border-radius: 5px; /* Sudut melengkung */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Efek bayangan */
+    transition: transform var(--transition-duration) ease-in-out;
+  }
+  
+  .list-img:hover {
+  }
+
+  .list2-img {
+    width: 520px;
+    height: 280px;
+    border-radius: 5px; /* Sudut melengkung */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Efek bayangan */
+    transition: transform var(--transition-duration) ease-in-out;
+  }
+  
+  .list2-img:hover {
+  }
+
+/* ==================== BUTTON STYLES ==================== */
+.btn-secondary {
+  border-radius: 5px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  font-size: 13px;
+  margin-top: 5px;
+  margin-bottom: 40px;
+  margin-right: 3px;
+}
+
+.btn-outline-secondary {
+  border-radius: 15px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  font-size: 13px;
+}
+
+#devchatButton {
+  cursor: pointer;
+}
+
+#apotekButton {
+  cursor: pointer;
+}
+
+#studentappButton {
+  cursor: pointer;
+}
+
+#viewmoreButton {
+  cursor: pointer;
+}
+
+#viewMoreButton {
+  margin-top: 40px; /* Jarak dari konten di atasnya */
+  padding: 10px 20px; /* Padding untuk tombol */
+  font-size: 1rem; /* Ukuran font */
+  border-radius: 10px; /* Sudut melengkung */
+}
+
+#viewMoreButton:hover {
+  color: white; /* Warna teks saat hover */
+}
+
+/* resources/css/project.css */
+/* Animasi slideInLeft */
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  40% {
+    opacity: 1;
+    transform: translateX(10px);
+  }
+  70% {
+    opacity: 1;
+    transform: translateX(-5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Animasi slideInRight */
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  40% {
+    opacity: 1;
+    transform: translateX(-10px);
+  }
+  70% {
+    opacity: 1;
+    transform: translateX(5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Kelas untuk animasi */
+.animate-left {
+  opacity: 0; /* Mulai dengan elemen tersembunyi */
+  transform: translateX(-30px); /* Mulai dari kiri */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.animate-right {
+  opacity: 0; /* Mulai dengan elemen tersembunyi */
+  transform: translateX(30px); /* Mulai dari kanan */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+/* Aktifkan animasi saat elemen masuk ke viewport */
+.animate-left.active {
+  animation: slideInLeft 1s ease-out forwards;
+}
+
+.animate-right.active {
+  animation: slideInRight 1s ease-out forwards;
+}

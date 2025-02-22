@@ -1,0 +1,490 @@
+/* ==================== VARIABLES ==================== */
+:root {
+    --primary-color: #333;
+    --secondary-color: #666;
+    --font-family-abel: 'Abel', sans-serif;
+    --font-family-quicksand: 'Quicksand', sans-serif;
+    --transition-duration: 0.3s;
+    --background-color: white;
+  }
+  
+  /* ==================== GENERAL STYLES ==================== */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    background-color: var(--background-color);
+    background-size: 20px 20px;
+    overflow-x: hidden;
+    font-family: var(--font-family-abel);
+  }
+
+  section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #dotBackground {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+  }
+  
+  .dot {
+    position: absolute;
+    bottom: -10px;
+    width: 5px;
+    height: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    animation: floatUp linear infinite;
+  }
+  
+  @keyframes floatUp {
+    0% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-100vh);
+      opacity: 0;
+    }
+  }
+  
+  /* ==================== NAVBAR STYLES ==================== */
+  .navbar {
+    background-color: rgba(255, 255, 255, 0);
+    margin-left: 30px;
+    margin-right: 30px;
+    box-shadow: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    width: 96%;
+    font-family: var(--font-family-quicksand);
+    font-weight: 500;
+  }
+  
+  .navbar-brand img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  
+  .navbar .fa-bars {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar .fa-bars:hover {
+    color: var(--secondary-color);
+  }
+
+  /* ==================== ABOUT SECTION STYLES ==================== */
+  #about {
+    margin-left: 150px;
+    margin-right: 150px;
+    color: black;
+    font-family: var(--font-family-abel);
+  }
+  
+  .about-image img {
+      margin-top: -22px;
+      margin-right: -200px;
+    width: 600px;
+    height: 600px;
+    object-fit: cover;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    filter: grayscale(100%);
+    transition: filter var(--transition-duration) ease-in-out;
+  }
+  
+  .about-profile-img:hover {
+    filter: grayscale(0%);
+  }
+  
+  .about-content {
+      padding-right: 100px;
+  }
+  
+  .about-title {
+    font-size: 3.0rem;
+    font-weight: bold;
+    color: var(--primary-color);
+  }
+  
+  .about-text {
+    margin-top: 40px;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #777;
+    text-align: justify;
+  }
+  
+  .about-line {
+    width: 75px; /* Panjang garis */
+    height: 2px; /* Ketebalan garis */
+    background-color: var(--primary-color); /* Warna garis */
+    margin: 5px 0; /* Jarak dari judul dan deskripsi */
+  }
+  
+  .about-line2 {
+    width: 75px; /* Panjang garis */
+    height: 2px; /* Ketebalan garis */
+    background-color: var(--primary-color); /* Warna garis */
+    margin: 0px 40px; /* Jarak dari judul dan deskripsi */
+  }
+
+/* ==================== DESC SECTION STYLES ==================== */
+#desc {
+  color: black;
+  font-family: var(--font-family-abel);
+  padding: 50px 0; /* Tambahkan padding */
+}
+
+.desc-wrapper {
+  display: flex;
+  align-items: flex-start; /* Rata atas */
+  gap: 40px; /* Jarak antara gambar dan tulisan */
+}
+
+.desc-title {
+  font-size: 2.3rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 50px;
+  text-align: left;
+}
+
+.desc-line {
+  width: 60px; /* Panjang garis */
+  height: 2px; /* Ketebalan garis */
+  background-color: var(--primary-color); /* Warna garis */
+  margin: 5px -30px; /* Jarak dari judul dan deskripsi */
+}
+
+.desc-line2 {
+  width: 60px; /* Panjang garis */
+  height: 2px; /* Ketebalan garis */
+  background-color: var(--primary-color); /* Warna garis */
+  margin: 0px 0px; /* Jarak dari judul dan deskripsi */
+}
+
+.desc-images {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Jarak antara gambar */
+}
+
+.desc-text {
+  flex: 1; /* Tulisan mengambil sisa ruang */
+  margin-top: 50px;
+  margin-left: 150px;
+}
+
+.desc-subtitle {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 40px;
+}
+
+.desc-description {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--secondary-color);
+  font-size: 0.9rem;
+  margin-bottom: 0px;
+  line-height: 1.6;
+  color: #777;
+  text-align: justify;
+}
+
+.spotify-button {
+  margin-top: 10px;
+  display: inline-flex;
+  align-items: center; /* Pusatkan ikon dan teks secara vertikal */
+  gap: 10px; /* Jarak antara ikon dan teks */
+  padding: 10px 20px; /* Padding tombol */
+  font-size: 15px; /* Ukuran font */
+  color: white; /* Warna teks */
+  background-color: #777; /* Warna latar belakang Spotify */
+  border: none; /* Hapus border */
+  border-radius: 10px; /* Sudut melengkung */
+  cursor: pointer; /* Ubah kursor saat dihover */
+  transition: background-color 0.3s ease; /* Efek transisi saat dihover */
+}
+
+.spotify-button:hover {
+  background-color: #1ed760; /* Warna latar belakang saat dihover */
+}
+
+.spotify-button i {
+  font-size: 20px; /* Ukuran ikon */
+}
+
+.spotify-button span {
+  font-weight: 500; /* Ketebalan teks */
+}
+
+/* Styling untuk gambar di bawah Highlight */
+.desc-image {
+  margin-top: 0px; /* Jarak antara tulisan dan gambar */
+  margin-left: 100px;
+}
+
+.desc-img {
+  margin-top: 0px;
+  margin-left: 160px;
+  width: 150px;
+  height: 150px;
+  border-radius: 0px; /* Sudut melengkung */
+  object-fit: cover;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Efek bayangan */
+  filter: grayscale(100%);
+  transition: filter var(--transition-duration) ease-in-out;
+}
+
+.desc-img:hover {
+  filter: grayscale(0%);
+}
+
+.desc-img2 {
+  margin-top: -130px;
+  margin-left: -50px;
+  width: 250px;
+  height: 250px;
+  border-radius: 0px; /* Sudut melengkung */
+  object-fit: cover;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Efek bayangan */
+  filter: grayscale(100%);
+  transition: filter var(--transition-duration) ease-in-out;
+}
+
+.desc-img2:hover {
+  filter: grayscale(0%);
+}
+
+.desc-img3 {
+  margin-top: -120px;
+  margin-left: 130px;
+  width: 200px;
+  height: 200px;
+  border-radius: 0px; /* Sudut melengkung */
+  object-fit: cover;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Efek bayangan */
+  filter: grayscale(100%);
+  transition: filter var(--transition-duration) ease-in-out;
+}
+
+.desc-img3:hover {
+  filter: grayscale(0%);
+}
+
+/* ==================== SKILL SECTION STYLES ==================== */
+#skill {
+  color: black;
+  font-family: var(--font-family-abel);
+  padding: 50px 0; /* Tambahkan padding */
+}
+
+.skill-content {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.skill-title {
+  font-size: 2.3rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.skill-description {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #777;
+  margin-top: 20px;
+}
+
+.skill-line {
+  width: 60px; /* Panjang garis */
+  height: 2px; /* Ketebalan garis */
+  background-color: var(--primary-color); /* Warna garis */
+  margin: 5px auto; /* Jarak dari judul dan deskripsi */
+}
+
+.skill-line2 {
+  width: 60px; /* Panjang garis */
+  height: 2px; /* Ketebalan garis */
+  background-color: var(--primary-color); /* Warna garis */
+  margin: 0px auto; /* Jarak dari judul dan deskripsi */
+}
+
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Responsif */
+  gap: 10px; /* Jarak antara skill */
+  width: 100%;
+  max-width: 800px; /* Lebar maksimum grid */
+  margin-top: -30px;
+}
+
+.expert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Responsif */
+  gap: 100px; /* Jarak antara skill */
+  width: 100%;
+  max-width: 1000px; /* Lebar maksimum grid */
+  margin-top: 150px; /* Tambahkan margin-top untuk memindahkan expert lebih ke bawah */
+}
+
+.skill-item {
+  background-color: transparent; /* Warna latar belakang */
+  padding: 5px; /* Padding diperkecil */
+  border-radius: 10px; /* Sudut melengkung */
+  text-align: center;
+  transition: transform var(--transition-duration) ease-in-out;
+}
+
+.expert-item {
+  background-color: transparent; /* Warna latar belakang */
+  padding: 5px; /* Padding diperkecil */
+  border-radius: 10px; /* Sudut melengkung */
+  text-align: center;
+  transition: transform var(--transition-duration) ease-in-out;
+}
+
+.skill-icon {
+  font-size: 1.5rem; /* Ukuran ikon diperkecil */
+  color: var(--primary-color); /* Warna ikon */
+  margin-bottom: 15px;
+}
+
+.skill-name {
+  font-size: 1.0rem;
+  font: bold;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.expert-name {
+  font-size: 1.0rem;
+  font: bold;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.expert-detail {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #777;
+}
+
+/* ==================== QUOTES STYLES ==================== */
+#quotes {
+  color: black;
+  font-family: var(--font-family-abel);
+  padding: 50px 0; /* Tambahkan padding */
+}
+
+.quotes-content {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.quotes-title {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+/* ==================== BUTTON STYLES ==================== */
+.btn-secondary {
+  border-radius: 5px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  font-size: 13px;
+  margin-top: 5px;
+  margin-bottom: 40px;
+  margin-right: 3px;
+}
+
+.btn-outline-secondary {
+  border-radius: 15px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  font-size: 13px;
+}
+/* Animasi slideInLeft */
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  40% {
+    opacity: 1;
+    transform: translateX(10px);
+  }
+  70% {
+    opacity: 1;
+    transform: translateX(-5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Animasi slideInRight */
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  40% {
+    opacity: 1;
+    transform: translateX(-10px);
+  }
+  70% {
+    opacity: 1;
+    transform: translateX(5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Kelas untuk animasi */
+.animate-left {
+  opacity: 0; /* Mulai dengan elemen tersembunyi */
+  transform: translateX(-30px); /* Mulai dari kiri */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.animate-right {
+  opacity: 0; /* Mulai dengan elemen tersembunyi */
+  transform: translateX(30px); /* Mulai dari kanan */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+/* Aktifkan animasi saat elemen masuk ke viewport */
+.animate-left.active {
+  animation: slideInLeft 1s ease-out forwards;
+}
+
+.animate-right.active {
+  animation: slideInRight 1s ease-out forwards;
+}
